@@ -5,11 +5,13 @@ const addTodoInput = document.querySelector("#add-todo-input");
 
 // -------------- Event Listeners --------------------
 
+// Update Input value
 addTodoInput.addEventListener("input", (e) => {
   addTodoInputValue = e.target.value;
 });
 
-addTodoButton.addEventListener("click", (e) => {
+// Add new Todo
+addTodoButton.addEventListener("click", () => {
   // create a todo object (id, text, isCompleted:false)
   let newTodo = { id: Date.now(), text: addTodoInputValue, isCompleted: false };
   // Initialize empty array or get the one in LS if exists
